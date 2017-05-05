@@ -10,6 +10,7 @@ class User < ApplicationRecord
   validates :email, :username, uniqueness: true
   validates :email, email_format: { message: "doesn't look like an email address" }
   validates :username, length: { maximum: 40 }
+  validates_format_of :username, :with => /[a-z\d_]+/i
 
   attr_accessor :password
 
