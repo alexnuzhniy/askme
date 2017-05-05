@@ -13,6 +13,7 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 gem 'jquery-rails'
+gem 'validates_email_format_of'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

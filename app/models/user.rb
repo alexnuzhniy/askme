@@ -8,14 +8,16 @@ class User < ApplicationRecord
 
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
+  validates :email, email_format: { message: "doesn't look like an email address" }
 
   attr_accessor :password
+
   #валидировать пароль только при создании
   validates_presence_of :password, on: :create
   validates_confirmation_of :password
 
   #callback т е encrypt_password будет вызываться перед сохранием объекта в базу
-  before_save encrypt_password
+  before_save :encrypt_password
 
   def encrypt_password
     if self.password.present?
