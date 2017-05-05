@@ -9,6 +9,7 @@ class User < ApplicationRecord
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
   validates :email, email_format: { message: "doesn't look like an email address" }
+  validates :username, length: { maximum: 40 }
 
   attr_accessor :password
 
