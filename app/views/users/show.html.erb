@@ -52,6 +52,11 @@
   </div>
 </div>
 
+<div class="questions-number">
+  У <%= @user.username %> <%= @questions.count %>
+  <%= inclination(@questions.count, 'вопрос', 'вопроса', 'вопросов') %>
+</div>
+
 <%# Блок со списком вопросов к пользователю %>
 <div class="column-3-4">
   <div class="user-questions buffer-both">

@@ -33,6 +33,7 @@ class UsersController < ApplicationController
   # Это действие отзывается, когда пользователь заходит по адресу /users/:id,
   # например /users/1.
   def show
+
     # Болванка пользователя
     @user = User.new(
       name: 'Vadim',
@@ -48,6 +49,8 @@ class UsersController < ApplicationController
         text: 'В чем смысл жизни?', created_at: Date.parse('27.03.2016')
       )
     ]
+
+    @user.questions = @questions
 
     # Болванка для нового вопроса
     @new_question = Question.new
