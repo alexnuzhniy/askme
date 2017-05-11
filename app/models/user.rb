@@ -44,9 +44,11 @@ class User < ApplicationRecord
     end
   end
 
+=begin
   before_validation :downcase_username
 
   def downcase_username
     self.username.downcase!
   end
+=end
 end
