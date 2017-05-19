@@ -8,6 +8,9 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
+
+gem 'rails_12factor' #делает логи на production полноценными и подробными
+
 gem 'uglifier'
 
 gem 'puma', '~> 3.7'
