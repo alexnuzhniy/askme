@@ -137,6 +137,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actioncable
   byebug
   jquery-rails
   listen (>= 3.0.5, < 3.2)
@@ -149,6 +150,9 @@ DEPENDENCIES
   uglifier
   validates_email_format_of
   web-console (>= 3.3.0)
+
+RUBY VERSION
+   ruby 2.4.0p0
 
 BUNDLED WITH
    1.14.6
