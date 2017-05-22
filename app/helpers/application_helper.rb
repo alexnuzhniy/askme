@@ -35,4 +35,8 @@ module ApplicationHelper
   def fa_icon(icon_class)
     content_tag 'span', '', class:"fa fa-#{icon_class}"
   end
+
+  def user_bg_color_white?(user)
+    user.bg_color == '#ffffff'
+  end
 end
