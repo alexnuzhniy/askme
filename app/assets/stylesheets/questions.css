@@ -45,3 +45,12 @@
 .questions-number {
   color: white;
 }
+
+.question-author {
+  font-size: 15px;
+  color: black;
+}
+
+.question-author a {
+  color: blue;
+}

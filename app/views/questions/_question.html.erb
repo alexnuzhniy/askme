@@ -9,6 +9,14 @@
       <%= question.text %>
     </div>
 
+    <div class="question-author">
+      <% user = User.find(question.author_id) if question.author_id %>
+      <% if user.present? %>
+          спрашивает
+        <%= link_to "@#{user.username}", user_path(user) %>
+      <% end %>
+    </div>
+
     <%# Текст ответа, если он есть %>
     <% if question.answer.present? %>
         <div class="question-answer text-lead">
