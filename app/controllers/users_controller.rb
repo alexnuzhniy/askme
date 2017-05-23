@@ -58,6 +58,11 @@ class UsersController < ApplicationController
     @unanswered_count = @questions_count - @answers_count
   end
 
+  def destroy
+    User.find(params[:id]).destroy
+    redirect_to root_url, alert: 'Пользователь удален'
+  end
+
   private
   def authorize_user
     reject_user unless @user == current_user

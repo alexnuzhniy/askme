@@ -29,3 +29,12 @@
   line-height: 15px;
   padding: 7px 15px;
 }
+
+.button-red {
+  margin-left: 800px;
+  background: red;
+}
+
+.button-red a {
+  color: white;
+}
