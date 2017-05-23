@@ -59,7 +59,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
+    user = User.find(params[:id])
+    user.questions.destroy_all
+    user.destroy
     redirect_to root_url, alert: 'Пользователь удален'
   end
 
